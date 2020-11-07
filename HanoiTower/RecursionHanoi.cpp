@@ -17,6 +17,6 @@ int main()
 {
 	int num = 5;
 	printf("하노이의 탑 알고리즘 확인\n");
-	Hanoi(5, 'A', 'B', 'C');
+	Hanoi(num, 'A', 'B', 'C');
 
 }
