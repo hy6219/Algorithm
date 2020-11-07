@@ -8,7 +8,7 @@ void Hanoi(int num, char from, char temp, char dest)
 		return;
 	}
 	Hanoi(num - 1, from, temp, dest);//n-1개 원반을 from에서 temp로 이동시키기
-	printf("\n move disc %d from group %c to group %c\n",num,from,dest);
+	printf("\n move disc from group %c to group %c\n",from,dest);
 	Hanoi(num - 1, temp, dest, from);//n-1개 원반을 temp에서 dest로 이동시키기
 }
 
