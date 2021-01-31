@@ -1,13 +1,19 @@
 package Arr_Bingo;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author
+ *3 bingo!
+ *성능면에서 어떻게 업그레이드 시킬수 있을까?
+ */
 public class Arr_Bingo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		final int SIZE=5;//macro const.
 		int[][] bingo=new int[SIZE][SIZE];
+		float start=System.currentTimeMillis();
 		//bingo initialization
 		for(int i=0;i<SIZE;i++)
 		{
@@ -68,9 +74,9 @@ public class Arr_Bingo {
 			 * 
 			 * JUST UPDATE COUNT STATUS ON GLOBAL VARIABLE!
 			 */
-			int l_r=0;//↘
+			int l_r=0;//↘ digonal line1
 			int l=0;
-			int r_l=0;//↙
+			int r_l=0;//↙digonal line2
 			int r=0;
 			/**
 			 * mark user input on bingo board &&
@@ -134,7 +140,7 @@ public class Arr_Bingo {
 				System.out.println();
 				if(check<3)
 				{
-					continue outer;
+					continue outer; //check bingo is ended or not to continue game
 				}
 				else
 				{
@@ -149,7 +155,7 @@ public class Arr_Bingo {
 			{
 				System.out.printf("%d 빙고!\n",check);
 			}
-			
+			System.out.printf("종료: %f\n",(float)(System.currentTimeMillis()-start)/1000.0);
 		}
 	}
 
